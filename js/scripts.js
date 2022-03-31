@@ -5,3 +5,9 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+$( document ).ready(function() {
+    var path = document.location.pathname;
+    var directory = path.substring(path.indexOf('/'), path.lastIndexOf('/'));
+    $('#nav-bar').load(directory + '/include/nav-bar.html');
+    w3.includeHTML();
+});
