@@ -44,10 +44,11 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <ul class="list-unstyled mb-0">
-                                    <li><a href="#!">Quick Start</a></li>
-                                    <li><a href="#!">Tutorial</a></li>
-                                    <li><a href="#!">Examples</a></li>
-                                    <li><a href="#!">About</a></li>
+                                    <li><a href="#introduce">Giới thiệu</a></li>
+                                    <li><a href="#terminology">Thuật ngữ</a></li>
+                                    <li><a href="#literal-character">Literal Character</a></li>
+                                    <li><a href="#non-print-character">Non-Printable Character</a></li>
+                                    <li><a href="#character-class">Character Class</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -60,7 +61,7 @@
                     <!-- Post header-->
                     <header class="mb-4">
                         <!-- Post title-->
-                        <h1 class="fw-bolder mb-1">Tham khảo nhanh Regex!</h1>
+                        <a id="introduce"><h1 class="fw-bolder mb-1">Tham khảo nhanh Regex!</h1></a>
                     </header>
                     <!-- Preview image figure-->
                     <figure class="mb-4"><img class="img-fluid rounded"
@@ -73,9 +74,9 @@
                             tham khảo trang huớng dẫn hoàn chỉnh. </p>
                         <p class="fs-5 mb-4">Mỗi chủ đề ở phần huớng dẫn nhanh này đều tuơng ứng
                             với chủ đề đó ở huớng dẫn hoàn chỉnh, nên bạn có thể thao khảo thêm dễ dàng.</p>
-                        <h2 class="fw-bolder mb-4 mt-5">Thuật ngữ</h2>
+                        <a id="terminology"><h2 class="fw-bolder mb-4 mt-5">Thuật ngữ</h2></a>
                         <p class="fs-5 mb-4">***</p>
-                        <h2 class="fw-bolder mb-4 mt-5">Literal Character - Chữ cứng</h2>
+                        <a id="literal-character"><h2 class="fw-bolder mb-4 mt-5">Literal Character - Chữ cứng</h2></a>
                         <p class="fs-5 mb-4">Câu regex cơ bản nhất chỉ có 1 kí tự, chẳng hạn chữ a. Nó sẽ khớp chữ a đầu
                             tiên trong một đoạn chuỗi. Nếu đoạn chuỗi là Jack is a boy, nó sẽ khớp chữ a sau chữ J.</p>
                         <p class="fs-5 mb-4">Regex có 12 kí tự đặc biệt của nó. Gạch xéo \, dấu ô ^, dấu dollar $, dấu
@@ -86,7 +87,7 @@
                             escape nó bằng dấu gạch xéo. Nếu bạn muốn khớp chuỗi 1+1=2, câu regex đúng sẽ là 1\+1=2. Nếu
                             không escape thì kí tự dấu + sẽ có ý nghĩa riêng của nó.</p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Literal characters - Chữ cứng</a></p>
-                        <h2 class="fw-bolder mb-4 mt-5">Non-Printable Character - Kí tự không được in</h2>
+                        <a id="non-print-character"><h2 class="fw-bolder mb-4 mt-5">Non-Printable Character - Kí tự không được in</h2></a>
                         <p class="fs-5 mb-4">Bạn có thể sử dụng chuỗi kí tự đặc biệt để thêm kí tự không in này vào
                             regex của bạn. Sử dụng \t để khớp một kí tự tab (ASCII 0x09), \r cho kí tự *** (0x0D), \n
                             cho kí tự xuống hàng (0x0A). Những kí tự đặc biệt khác như \a (***, 0x07), \e (escape,
@@ -102,7 +103,7 @@
                             của Character class.</p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Non-Printable Characters - Kí tự không in</a>
                         </p>
-                        <h2 class="fw-bolder mb-4 mt-5">Character Class - Bộ kí tự</h2>
+                        <a id="character-class"><h2 class="fw-bolder mb-4 mt-5">Character Class - Bộ kí tự</h2></a>
                         <p class="fs-5 mb-4">Character class sẽ khớp một trong nhiều kí tự đuợc chỉ định. Ví dụ để khớp
                             chữ a hoặc e, bạn sử dụng [ae]. Bạn có thể sử dụng câu gr[ae]y để khớp đuợc cả chuỗi gray và
                             grey. Một character class chỉ khớp đuợc một kí tự. gr[ae]y không thể khớp đuợc chuỗi graay
