@@ -15,7 +15,23 @@
 
 <body>
     <!-- Responsive navbar-->
-    <div id="nav-bar"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Regex 101</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/quick-start.html">Quick Start</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/tutorial.html">Tutorial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/examples.html">Examples</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- Page content-->
     <div class="container mt-5">
         <div class="row">
@@ -23,12 +39,12 @@
             <div class="col-lg-3">
                 <!-- Categories widget-->
                 <div class="card mb-4">
-                    <div class="card-header">Welcome</div>
+                    <div class="card-header">Contents</div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-6">
                                 <ul class="list-unstyled mb-0">
-                                    <li><a href="#!">Quick Start</a></li>
+                                    <li><a href="./pages/quick-start.html">Quick Start</a></li>
                                     <li><a href="#!">Tutorial</a></li>
                                     <li><a href="#!">Examples</a></li>
                                     <li><a href="#!">About</a></li>
@@ -62,10 +78,11 @@
                                 target="_blank">Automatic Engine</a> để đổi tên hàng loạt file theo ý muốn. Regex có thể
                             đuợc
                             sử dụng trong nhiều ngôn ngữ khác nhau như Perl, PHP, Java, .NET và nhiều hơn nữa.</p>
-                        <h2 class="fw-bolder mb-4 mt-5"><a href="#" class="white-link">Regex Quick Start</a></h2>
-                        <p class="fs-5 mb-4">Nếu muốn sử dụng ngay regex, bạn có thể tham khảo <a href="#">Trang tóm tắt
-                                nhanh
-                                regex</a>. Ở đó sẽ khái
+                        <h2 class="fw-bolder mb-4 mt-5"><a href="./pages/quick-start.html" class="white-link">Regex
+                                Quick Start</a></h2>
+                        <p class="fs-5 mb-4">Nếu muốn sử dụng ngay regex, bạn có thể tham khảo <a
+                                href="./pages/quick-start.html">Trang tóm tắt
+                                nhanh regex</a>. Ở đó sẽ khái
                             quát nhanh những khái niệm regex cần biết để bạn có thể viết một câu biểu thức regex đơn
                             giản, nhưng ở đó sẽ không có những thông tin chi tiết để bạn có thể thành thạo về regex. Ở
                             mỗi phần của trang tóm tắt này đều sẽ có link trực tiếp đến trang chi tiết của phần đó trong
@@ -92,8 +109,8 @@
     <!-- Footer-->
     <footer class="py-3 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Regex 101 by <a href="https://github.com/phamngocvinh" target="_blank">Pham Ngoc
-                    Vinh</a></p>
+            <p class="m-0 text-center text-white">Regex 101 by <a href="https://github.com/phamngocvinh"
+                    target="_blank">Pham Ngoc Vinh</a></p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

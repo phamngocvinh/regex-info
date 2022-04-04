@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Regular Expression Tutorial" />
+    <meta name="author" content="Pham Ngoc Vinh" />
+    <title>Regex 101</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/icon.svg" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Regex 101</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/quick-start.html">Quick Start</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/tutorial.html">Tutorial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/examples.html">Examples</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page content-->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Side widgets-->
+            <div class="col-lg-3">
+                <!-- Categories widget-->
+                <div class="card mb-4">
+                    <div class="card-header">Contents</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="#!">Quick Start</a></li>
+                                    <li><a href="#!">Tutorial</a></li>
+                                    <li><a href="#!">Examples</a></li>
+                                    <li><a href="#!">About</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <!-- Post content-->
+                <article>
+                    <!-- Post header-->
+                    <header class="mb-4">
+                        <!-- Post title-->
+                        <h1 class="fw-bolder mb-1">Tham khảo nhanh Regex!</h1>
+                    </header>
+                    <!-- Preview image figure-->
+                    <figure class="mb-4"><img class="img-fluid rounded"
+                            src="https://dummyimage.com/900x400/3B4252/eceff4.jpg&text=Quick+Start" alt="..." />
+                    </figure>
+                    <!-- Post content-->
+                    <section class="mb-5">
+                        <p class="fs-5 mb-4">Phần huớng dẫn này sẽ giúp bạn hiểu nhanh regex với thời gian ngắn. Dĩ
+                            nhiên nó sẽ không giải thích cho bạn mọi thứ về regex. Để hiểu chi tiết hơn về regex, hãy
+                            tham khảo trang huớng dẫn hoàn chỉnh. Mỗi chủ đề ở phần huớng dẫn nhanh này đều tuơng ứng
+                            với chủ đề đó ở huớng dẫn hoàn chỉnh, nên bạn có thể thao khảo thêm dễ dàng.</p>
+                        <h2 class="fw-bolder mb-4 mt-5">Thuật ngữ</h2>
+                        <p class="fs-5 mb-4">***</p>
+                        <h2 class="fw-bolder mb-4 mt-5">Literal Character - Chữ cứng</h2>
+                        <p class="fs-5 mb-4">Câu regex cơ bản nhất chỉ có 1 kí tự, chẳng hạn chữ a. Nó sẽ khớp chữ a đầu
+                            tiên trong một đoạn chuỗi. Nếu đoạn chuỗi là Jack is a boy, nó sẽ khớp chữ a sau chữ J.</p>
+                        <p class="fs-5 mb-4">Regex có 12 kí tự đặc biệt của nó. Gạch xéo \, dấu ô ^, dấu dollar $, dấu
+                            chấm ., gạch thẳng |, dấu hỏi ?, dấu sao *, dấu cộng +, dấu mở ngoặc (, dấu đóng ngoặc ),
+                            ngoặc vuông [, ngoặc nhọn {. Những kí tự này đuợc gọi là "metacharacters". Phần lớn chúng bị
+                            lỗi nếu xài một mình.</p>
+                        <p class="fs-5 mb-4">Nếu bạn muốn sử dụng những kí tự này như là chữ cứng trong regex, bạn phải
+                            escape nó bằng dấu gạch xéo. Nếu bạn muốn khớp chuỗi 1+1=2, câu regex đúng sẽ là 1\+1=2. Nếu
+                            không escape thì kí tự dấu + sẽ có ý nghĩa riêng của nó.</p>
+                        <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Literal characters - Chữ cứng</a></p>
+                        <h2 class="fw-bolder mb-4 mt-5">Non-Printable Character - Kí tự không được in</h2>
+                        <p class="fs-5 mb-4">Bạn có thể sử dụng chuỗi kí tự đặc biệt để thêm kí tự không in này vào
+                            regex của bạn. Sử dụng \t để khớp một kí tự tab (ASCII 0x09), \r cho kí tự *** (0x0D), \n
+                            cho kí tự xuống hàng (0x0A). Những kí tự đặc biệt khác như \a (***, 0x07), \e (escape,
+                            0x1B), \f (***, 0x0C) và \v (tab dọc, 0x0B). Nhớ rằng Windows sử dụng \r\n để xuống dòng,
+                            còn UNIX sử dụng \n.</p>
+                        <p class="fs-5 mb-4">Nếu ứng dụng có hổ trợ Unicode, bạn có thể sử dụng \uFFFF hoặc \x{FFFF} để
+                            thêm kí tự đặc biệt. \u20AC hoặc \x{20AC} để khớp kí tự tiền tệ euro.
+                            Nếu ứng dụng không hổ trợ Unicode, sử dụng \xFF để khớp kí tự đặc biệt bằng mã index
+                            hexadecimal trong bộ character set. \xA9 khớp kí tự copyright trong bản character set
+                            Latin-1.
+                            Tất cả Kí tự không in có thể sử dụng trực tiếp trong regex, hoặc là sử dụng như là một phần
+                            của Character class.</p>
+                        <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Non-Printable Characters - Kí tự không in</a></p>
+                        <h2 class="fw-bolder mb-4 mt-5">Character Class - Bộ kí tự</h2>
+                        <p class="fs-5 mb-4">Character class sẽ khớp một trong nhiều kí tự đuợc chỉ định. Ví dụ để khớp
+                            chữ a hoặc e, bạn sử dụng [ae]. Bạn có thể sử dụng câu gr[ae]y để khớp đuợc cả chuỗi gray và
+                            grey. Một character class chỉ khớp đuợc một kí tự. gr[ae]y không thể khớp đuợc chuỗi graay
+                            hay graey. Thứ tự kí tự chỉ định trong character class không quan trọng. [ae] giống với
+                            [ea].
+                            Bạn có thể sử dụng gạch ngang trong character class để chỉ định một dãy kí tự. [0-9] sẽ khớp
+                            một số giữa 0 và 9. Bạn có thể gộp chung nhiều dãy kí tự trong regex. [0-9a-fA-F] sẽ khớp
+                            một kí tự số hex (Ví dụ: 0xE).
+                            Nếu bạn thêm dấu ^ sau dấu ngoặc vuông, bạn sẽ chỉ định dãy kí tự ***.</p>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <footer class="py-3 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Regex 101 by <a href="https://github.com/phamngocvinh"
+                    target="_blank">Pham Ngoc Vinh</a></p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
