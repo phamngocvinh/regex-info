@@ -214,9 +214,34 @@
                             <h2 class="fw-bolder mb-4 mt-5">Named Group</h2>
                         </a>
                         <p class="fs-5 mb-4">Nếu câu regex của bạn có nhiều group, việc nhớ thứ tự của group sẽ rất khó.
-                            Để dễ dàng hơn thì regex cho phép bạn đặt tên group. Câu (?&lt;mygroup&gt;[abc])=\k&lt;mygroup&gt; giống
-                                    với câu ([abc])=\1, nhưng bạn có thể gọi group bằng tên của nó.</p>
-                        <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Named Group</a></p>
+                            Để dễ dàng hơn thì regex cho phép bạn đặt tên group. Câu
+                            (?&lt;mygroup&gt;[abc])=\k&lt;mygroup&gt; giống
+                            với câu ([abc])=\1, nhưng bạn có thể gọi group bằng tên của nó.</p>
+                        <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Named Group</a></p><a id="lookaround">
+                            <h2 class="fw-bolder mb-4 mt-5">Lookaround</h2>
+                        </a>
+                        <p class="fs-5 mb-4">Lookaround là một loại group đặc biệt. Nó không trả về kết quả khớp mà dùng
+                            để chỉ định một vị trí như là Anchor.</p>
+                        <p class="fs-5 mb-4">q(?=u) sẽ khớp chữ q trong chuỗi question, nhưng không khớp trong chuỗi
+                            Iraq. Đây là lookahead. Chữ u không nằm trong kết quả của regex, nó dùng để chỉ định điều
+                            kiện tìm kiếm. Trong ví dụ này nó sẽ tìm chữ q nào mà có chữ u nằm trước nó.</p>
+                        <p class="fs-5 mb-4">q(?!u) sẽ khớp chữ q trong chuỗi Iraq, nhưng không khớp trong chuỗi
+                            question. Đây là negative lookahead. Ngược lại với lookahead, nó sẽ tìm chữ q mà không có
+                            chữ u nằm trước nó.</p>
+                        <p class="fs-5 mb-4">Để tìm chữ nằm sau, bạn sử dụng lookbehind. Câu (?&lt;=a)b khớp với chữ b
+                            trong chuỗi abc. Câu negative lookbehind (?&lt;!a)b sẽ không khớp được với chuỗi abc.</p>
+                        <p class="fs-5 mb-4">Bạn có thể chèn cả một câu regex bên trong lookahead. Nhưng một số
+                            ứng dụng sẽ giới hạn regex trong lookbehind.</p>
+                        <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Lookaround</a></p>
+                        <a id="unicode">
+                            <h2 class="fw-bolder mb-4 mt-5">Unicode</h2>
+                        </a>
+                        <p class="fs-5 mb-4">\p{L} sẽ khớp một kí tự trong bảng mã Unicode. L có nghĩa là
+                            letter. \P{L}
+                            sẽ khớp một kí tự không có trong bảng mã Unicode. Bạn có thể xem đầy đủ <a href="#">Bảng mã
+                                Unicode</a>
+                            trong hướng dẫn hoàn chỉnh.</p>
+                        <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Unicode</a></p>
                     </section>
                 </article>
             </div>
