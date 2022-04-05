@@ -117,14 +117,25 @@
                             <h2 class="fw-bolder mb-4 mt-5">Non-Printable Character - Kí tự không được in</h2>
                         </a>
                         <p class="fs-5 mb-4">Bạn có thể sử dụng chuỗi kí tự đặc biệt để thêm kí tự không in này vào
-                            regex của bạn. Sử dụng \t để khớp một kí tự tab (ASCII 0x09), \r cho kí tự *** (0x0D), \n
-                            cho kí tự xuống hàng (0x0A). Những kí tự đặc biệt khác như \a (***, 0x07), \e (escape,
-                            0x1B), \f (***, 0x0C) và \v (tab dọc, 0x0B). Nhớ rằng Windows sử dụng \r\n để xuống dòng,
-                            còn UNIX sử dụng \n.</p>
-                        <p class="fs-5 mb-4">Nếu ứng dụng có hổ trợ Unicode, bạn có thể sử dụng \uFFFF hoặc \x{FFFF} để
-                            thêm kí tự đặc biệt. \u20AC hoặc \x{20AC} để khớp kí tự tiền tệ euro.
-                            Nếu ứng dụng không hổ trợ Unicode, sử dụng \xFF để khớp kí tự đặc biệt bằng mã index
-                            hexadecimal trong bộ character set. \xA9 khớp kí tự copyright trong bản character set
+                            regex của bạn. Sử dụng <mark class="blue">\t</mark> để khớp một kí tự tab (ASCII 0x09),
+                            <mark class="blue">\r</mark>
+                            cho kí tự carriage return (0x0D), <mark class="blue">\n</mark>
+                            cho kí tự xuống hàng (line feed, 0x0A). Những kí tự đặc biệt khác như <mark
+                                class="blue">\a</mark>
+                            (bell, 0x07), <mark class="blue">\e</mark> (escape,
+                            0x1B), <mark class="blue">\f</mark> (form feed, 0x0C) và <mark class="blue">\v</mark> (tab
+                            dọc,
+                            0x0B). Nhớ rằng Windows sử dụng \r\n để xuống dòng,
+                            còn UNIX sử dụng \n.
+                        </p>
+                        <p class="fs-5 mb-4">Nếu ứng dụng có hổ trợ Unicode, bạn có thể sử dụng <mark
+                                class="blue">\uFFFF</mark> hoặc <mark class="blue">\x{FFFF}</mark> để
+                            thêm kí tự đặc biệt. <mark class="blue">\u20AC</mark> hoặc <mark
+                                class="blue">\x{20AC}</mark> để khớp kí tự tiền tệ euro.
+                            Nếu ứng dụng không hổ trợ Unicode, sử dụng <mark class="blue">\xFF</mark> để khớp kí tự đặc
+                            biệt bằng mã index
+                            hexadecimal trong bộ character set. <mark class="blue">\xA9</mark> khớp kí tự copyright
+                            trong bản character set
                             Latin-1.</p>
                         <p class="fs-5 mb-4">Tất cả Kí tự không in có thể sử dụng trực tiếp trong regex, hoặc là sử dụng
                             như là một phần
@@ -135,127 +146,210 @@
                             <h2 class="fw-bolder mb-4 mt-5">Character Class - Bộ kí tự</h2>
                         </a>
                         <p class="fs-5 mb-4">Character class sẽ khớp một trong nhiều kí tự đuợc chỉ định. Ví dụ để khớp
-                            chữ a hoặc e, bạn sử dụng [ae]. Bạn có thể sử dụng câu gr[ae]y để khớp đuợc cả chuỗi gray và
-                            grey. Một character class chỉ khớp đuợc một kí tự. gr[ae]y không thể khớp đuợc chuỗi graay
-                            hay graey. Thứ tự kí tự chỉ định trong character class không quan trọng. [ae] giống với
-                            [ea].</p>
+                            chữ <mark class="gray">a</mark> hoặc <mark class="gray">e</mark>, bạn sử dụng <mark
+                                class="blue">[ae]</mark>. Bạn có thể sử dụng câu <mark class="gray">gr</mark><mark
+                                class="blue">[ae]</mark><mark class="gray">y</mark> để
+                            khớp đuợc cả chuỗi <mark class="green">gray</mark> và
+                            <mark class="green">grey</mark>. Một character class chỉ khớp đuợc một kí tự. <mark
+                                class="gray">gr</mark><mark class="blue">[ae]</mark><mark class="gray">y</mark> không
+                            thể khớp đuợc chuỗi <mark class="green">graay</mark>
+                            hay <mark class="green">graey</mark>. Thứ tự kí tự chỉ định trong character class không quan
+                            trọng. [ae] giống với [ea].
+                        </p>
                         <p class="fs-5 mb-4">Bạn có thể sử dụng gạch ngang trong character class để chỉ định một dãy kí
-                            tự. [0-9] sẽ khớp
-                            một số giữa 0 và 9. Bạn có thể gộp chung nhiều dãy kí tự trong regex. [0-9a-fA-F] sẽ khớp
+                            tự. <mark class="blue">[0-9]</mark> sẽ khớp
+                            một số giữa 0 và 9. Bạn có thể gộp chung nhiều dãy kí tự trong regex. <mark
+                                class="blue">[0-9a-fA-F]</mark> sẽ khớp
                             một kí tự số hex (Ví dụ: 0xE).</p>
-                        <p class="fs-5 mb-4">Nếu bạn thêm dấu ^ sau dấu ngoặc vuông, bạn sẽ chỉ định một bộ kí tự bỏ
+                        <p class="fs-5 mb-4">Nếu bạn thêm dấu <mark class="red">^</mark> sau dấu ngoặc vuông, bạn sẽ chỉ
+                            định một bộ kí tự bỏ
                             qua. Có nghĩa là
-                            regex sẽ tìm những kí tự mà bạn không chỉ định trong Character class đó. Ví dụ qu[^a] sẽ
-                            khớp với chuỗi quy hay que và sẽ không khớp chuỗi qua.</p>
+                            regex sẽ tìm những kí tự mà bạn không chỉ định trong Character class đó. Ví dụ <mark
+                                class="gray">qu</mark><mark class="blue">[</mark><mark class="red">^</mark><mark
+                                class="blue">a]</mark> sẽ
+                            khớp với chuỗi <mark class="green">quy</mark> hay <mark class="green">que</mark> và sẽ không
+                            khớp chuỗi <mark class="green">qua</mark>.</p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Character Class</a></p>
                         <a id="short-character-class">
                             <h2 class="fw-bolder mb-4 mt-5">Shorthand Character Class - Bộ kí tự tiện ích</h2>
                         </a>
-                        <p class="fs-5 mb-4">\d sẽ khớp một kí tự số, \w sẽ khớp một kí tự chữ (bao gồm chữ số và gạch
-                            duới), và \s sẽ khớp một kí tự khoản trắng (bao gồm kí tự tab và xuống hàng).</p>
+                        <p class="fs-5 mb-4"><mark class="blue">\d</mark> sẽ khớp một kí tự số, <mark
+                                class="blue">\w</mark> sẽ khớp một kí tự chữ (bao gồm chữ số và gạch
+                            duới), và <mark class="blue">\s</mark> sẽ khớp một kí tự khoản trắng (bao gồm kí tự tab và
+                            xuống hàng).</p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Shorthand Character Class</a></p>
                         <a id="using-dot">
                             <h2 class="fw-bolder mb-4 mt-5">Using Dot - Sử dụng dấu chấm</h2>
                         </a>
-                        <p class="fs-5 mb-4">Dấu chấm sẽ khớp bất kì kí tự nào, ngoại trừ kí tự xuống hàng.</p>
-                        <p class="fs-5 mb-4">gr.y sẽ khớp gray, grey, gr%y, v.v. Chỉ sử dụng dấu chấm khi cần thiết.
+                        <p class="fs-5 mb-4">Dấu chấm <mark class="red">.</mark> sẽ khớp bất kì kí tự nào, ngoại trừ kí
+                            tự xuống hàng.</p>
+                        <p class="fs-5 mb-4"><mark class="gray">gr</mark><mark class="red">.</mark><mark
+                                class="gray">y</mark> sẽ khớp với <mark class="green">gray</mark>, <mark
+                                class="green">grey</mark>, <mark class="green">gr%y</mark>, v.v. Chỉ sử dụng dấu chấm
+                            khi cần thiết.
                             Thuờng thì sử dụng Character class sẽ chính xác và tuờng minh hơn.</p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Dot</a></p>
                         <a id="anchor">
                             <h2 class="fw-bolder mb-4 mt-5">Anchor</h2>
                         </a>
-                        <p class="fs-5 mb-4">Anchor không dùng để tìm một kí tụ, nó dùng để khớp một vị trí. ^ sẽ khớp
-                            vị trí đầu của chuỗi, và $ sẽ khớp vị trí cuối của chuỗi. Phần lớn các regex sẽ có chức năng
-                            "multi-line" cho phép dấu ^ khớp sau kí tự xuống dòng, và $ khớp trước kí tự xuống dòng. Ví
-                            dụ ^b chỉ khớp chữ b đầu tiên trong chuỗi bob.</p>
-                        <p class="fs-5 mb-4">\b sẽ khớp với một từ. Một từ được định nghĩa từ vị trí có thể khớp bởi
-                            \w đến vị trí không thể khớp bởi \w.
-                            Ví dụ: \bis\b sẽ chỉ khớp với chữ is thứ 3 trong chuỗi This island is beautiful.</p>
+                        <p class="fs-5 mb-4">Anchor không dùng để tìm một kí tụ, nó dùng để khớp một vị trí. <mark
+                                class="red">^</mark> sẽ khớp
+                            vị trí đầu của chuỗi, và <mark class="red">$</mark> sẽ khớp vị trí cuối của chuỗi. Phần lớn
+                            các regex sẽ có chức năng
+                            "multi-line" cho phép dấu <mark class="red">^</mark> khớp sau kí tự xuống dòng, và <mark
+                                class="red">$</mark> khớp trước kí tự xuống dòng. Ví
+                            dụ <mark class="red">^</mark><mark class="gray">b</mark> chỉ khớp chữ <mark
+                                class="gray">b</mark> đầu tiên trong chuỗi
+                            <mark class="green">bob</mark>.
+                        </p>
+                        <p class="fs-5 mb-4"><mark class="blue">\b</mark> sẽ khớp với một từ. Một từ được định nghĩa từ
+                            vị trí có thể khớp bởi
+                            <mark class="blue">\w</mark> đến vị trí không thể khớp bởi <mark class="blue">\w</mark>.
+                            Ví dụ: <mark class="blue">\b</mark><mark class="gray">is</mark><mark class="blue">\b</mark>
+                            sẽ chỉ khớp với chữ <mark class="gray">is</mark> thứ 3 trong chuỗi <mark class="green">This
+                                island is beautiful</mark>.
+                        </p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Anchor</a></p>
                         <a id="alternation">
                             <h2 class="fw-bolder mb-4 mt-5">Alternation</h2>
                         </a>
-                        <p class="fs-5 mb-4">Alternation trong regex giống với câu lệnh "or". cat|dog sẽ khớp chữ cat
-                            trong chuỗi About cats and dogs. Nếu search tiếp, nó sẽ khớp chữ dog. Bạn có thể thêm nhiều
-                            định nghĩa tùy thích: cat|dog|mouse|fish.</p>
-                        <p class="fs-5 mb-4">Alternation có độ ưu tiên thấp nhất trong regex. cat|dog food sẽ khớp cat
-                            hoặc dog food. Nếu bạn muốn tạo câu regex để khớp được cả chuỗi cat food hoặc dog food, bạn
-                            cần phải sử dụng chức năng group (gộp nhóm): (cat|dog) food.</p>
+                        <p class="fs-5 mb-4">Alternation trong regex giống với câu lệnh "or". <mark
+                                class="blue">cat|dog</mark> sẽ khớp chữ <mark class="gray">cat</mark>
+                            trong chuỗi <mark class="green">About cats and dogs</mark>. Nếu search tiếp, nó sẽ khớp chữ
+                            <mark class="gray">dog</mark>. Bạn có thể thêm nhiều
+                            định nghĩa tùy thích: <mark class="blue">cat|dog|mouse|fish</mark>.
+                        </p>
+                        <p class="fs-5 mb-4">Alternation có độ ưu tiên thấp nhất trong regex. <mark class="blue">cat|dog
+                                food</mark> sẽ khớp <mark class="gray">cat</mark>
+                            hoặc <mark class="gray">dog food</mark>. Nếu bạn muốn tạo câu regex để khớp được cả chuỗi
+                            <mark class="green">cat food</mark> hoặc <mark class="green">dog food</mark>, bạn
+                            cần phải sử dụng chức năng group (gộp nhóm): <mark class="blue">(cat|dog) food</mark>.
+                        </p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Alternation</a></p>
 
                         <a id="repetition">
                             <h2 class="fw-bolder mb-4 mt-5">Repetition - Lập lại</h2>
                         </a>
-                        <p class="fs-5 mb-4">Dấu hỏi ? sẽ cho phép kí tự trước đó là tùy chọn. colou?r sẽ khớp được cả
-                            colour hoặc color.</p>
-                        <p class="fs-5 mb-4">Dấu sao * sẽ cho phép kí tự trước đó có thể xuất hiện không hoặc nhiều lần.
+                        <p class="fs-5 mb-4">Dấu hỏi <mark class="red">?</mark> sẽ cho phép kí tự trước đó có thể xuất
+                            hiện hoặc không.
+                            <mark class="gray">colou</mark><mark class="red">?</mark><mark class="gray">r</mark> sẽ khớp
+                            được cả
+                            <mark class="green">colour</mark> hoặc <mark class="green">color</mark>.
                         </p>
-                        <p class="fs-5 mb-4">Dấu cộng + sẽ cho phép kí tự trước đó có thể xuất hiện một hoặc nhiều lần.
+                        <p class="fs-5 mb-4">Dấu sao <mark class="red">*</mark> sẽ chỉ định kí tự trước đó có thể xuất
+                            hiện không hoặc nhiều lần.
+                        </p>
+                        <p class="fs-5 mb-4">Dấu cộng <mark class="red">+</mark> sẽ chỉ định kí tự trước đó có thể xuất
+                            hiện một hoặc nhiều lần.
                         </p>
                         <p class="fs-5 mb-4">
-                            <[A-Za-z][A-Za-z0-9]*> sẽ khớp với một tag HTML không có thuộc tính. Ví dụ: &lt;h2&gt;,
-                                &lt;label&gt;.
+                            <mark class="blue">
+                                &lt;[A-Za-z][A-Za-z0-9]</mark><mark class="red">*</mark><mark class="blue">&gt;</mark>
+                            sẽ
+                            khớp với một tag HTML không có thuộc tính. Ví dụ: <mark class="green">&lt;h2&gt;</mark>,
+                            <mark class="green">&lt;label&gt;</mark>.
                         </p>
-                        <p class="fs-5 mb-4">Sử dụng ngoặc nhọn để chỉ định số lần lập. Dùng [1-9][0-9]{3} để khớp một
-                            số từ 1000 đến 9999. Dùng [1-9][0-9]{2,4} để khớp một số từ 100 đến 99999.</p>
+                        <p class="fs-5 mb-4">Sử dụng ngoặc nhọn để chỉ định số lần lập. Dùng <mark
+                                class="blue">[1-9][0-9]{3}</mark> để khớp một
+                            số từ 1000 đến 9999. Dùng <mark class="blue">[1-9][0-9]{2,4}</mark> để khớp một số từ 100
+                            đến 99999.</p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Repetition</a></p>
                         <a id="greedy">
                             <h2 class="fw-bolder mb-4 mt-5">Greedy và Lazy Repetition</h2>
                         </a>
                         <p class="fs-5 mb-4">Câu lệnh Repetition là dạng câu greedy (Tham lam). Có nghĩa là nó sẽ khớp
                             cho đến khi nào nó không thể khớp được nữa thôi, thay vì trả về kết quả đầu tiên thỏa điều
-                            kiện. Câu regex <.+> sẽ khớp &lt;EM&gt;first&lt;/EM&gt; trong chuỗi This is a
-                                &lt;EM>first&lt;/EM&gt; test.</p>
-                        <p class="fs-5 mb-4">Đặt dấu hỏi ? phía sau Repetition sẽ làm cho nó lazy (Làm biếng). <.+?> sẽ
-                                chỉ khớp &lt;EM&gt; trong chuỗi trên.</p>
-                        <p class="fs-5 mb-4">Một giải pháp tốt hơn là sử dụng không sử dụng Dot. Sử dụng câu regex <[^<>
-                                ]+> để tìm một tag HTML nhanh và tường minh hơn.</p>
+                            kiện. Câu regex <mark class="blue">&lt;.+&gt;</mark> sẽ khớp toàn bộ <mark
+                                class="gray">&lt;EM&gt;first&lt;/EM&gt;</mark>
+                            trong chuỗi <mark class="green">This is a
+                                &lt;EM>first&lt;/EM&gt; test</mark>.</p>
+                        <p class="fs-5 mb-4">Đặt dấu hỏi <mark class="red">?</mark> phía sau Repetition sẽ làm cho nó
+                            lazy (Làm biếng). <mark class="blue">&lt;.+?&gt;</mark> sẽ
+                            chỉ khớp <mark class="gray">&lt;EM&gt;</mark> trong chuỗi trên.</p>
+                        <p class="fs-5 mb-4">Một giải pháp tốt hơn là sử dụng không sử dụng Dot. Sử dụng câu regex <mark
+                                class="blue">&lt;[^&lt;&gt;]+&gt;</mark> để tìm một tag HTML nhanh và tường minh hơn.
+                        </p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Greedy và Lazy Repetition</a></p>
                         <a id="group">
                             <h2 class="fw-bolder mb-4 mt-5">Grouping và Capturing</h2>
                         </a>
-                        <p class="fs-5 mb-4">Bao quanh biểu thức bằng ngoặc tròn để group nó lại với nhau. Bạn có thể sử
-                            dụng dấu lập lại hay tùy chọn với group. Ví dụ: Set(Value)? khớp Set hoặc SetValue.</p>
+                        <p class="fs-5 mb-4">Bao quanh biểu thức bằng ngoặc tròn <mark class="red">( )</mark> để group
+                            chúng lại với nhau. Bạn có thể sử
+                            dụng dấu lập lại hay tùy chọn với group. Ví dụ: <mark class="gray">Set</mark><mark
+                                class="red">(</mark><mark class="gray">Value</mark><mark class="red">)</mark><mark
+                                class="blue">?</mark> khớp <mark class="green">Set</mark>
+                            hoặc <mark class="green">SetValue</mark>.</p>
                         <p class="fs-5 mb-4">Ngoặc tròn sẽ tạo ra một group. Ví dụ ở trên chỉ có một group. Group 1 sẽ
-                            không có gì nếu nó khớp chuỗi Set. Group 1 sẽ chứa Value nếu nó khớp chuỗi SetValue.</p>
-                        <p class="fs-5 mb-4">Sử dụng kí tự đặc biệt Set(?:Value)? để group biểu thức lại mà không tạo ra
+                            không có gì nếu nó khớp chuỗi <mark class="green">Set</mark>. Group 1 sẽ chứa <mark
+                                class="orange">Value</mark> nếu nó
+                            khớp chuỗi <mark class="green">SetValue</mark>.</p>
+                        <p class="fs-5 mb-4">Sử dụng kí tự đặc biệt <mark class="gray">Set</mark><mark
+                                class="blue">(</mark><mark class="red">?:</mark><mark class="gray">Value</mark><mark
+                                class="blue">)</mark><mark class="blue">?</mark> để group biểu thức lại mà không tạo ra
                             một group. Việc này thuận tiện khi bạn không cần sử dụng giá trị của group.</p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Grouping và Capturing</a></p>
                         <a id="backreference">
                             <h2 class="fw-bolder mb-4 mt-5">Backreference</h2>
                         </a>
-                        <p class="fs-5 mb-4">Trong regex, bạn có thể sử dụng \1 để truy vấn giá trị vừa khớp được trong
-                            group. ([abc])=\1 sẽ khớp a=a, b=b, và c=c. Nếu câu regex của bạn có nhiều group, số thứ tự
-                            truy vấn sẽ đếm từ trái qua phải.</p>
+                        <p class="fs-5 mb-4">Trong regex, bạn có thể sử dụng <mark class="red">\1</mark> để truy vấn giá
+                            trị vừa khớp được trong
+                            group. <mark class="blue">([</mark><mark class="gray">abc</mark><mark
+                                class="blue">])</mark><mark class="gray">=</mark><mark class="red">\1</mark> sẽ khớp
+                            <mark class="green">a=a</mark>, <mark class="green">b=b</mark>, và <mark
+                                class="green">c=c</mark>. Nếu câu regex của bạn có nhiều group, số thứ tự
+                            truy vấn sẽ đếm từ trái qua phải.
+                        </p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Backreference</a></p>
                         <a id="named-groups">
                             <h2 class="fw-bolder mb-4 mt-5">Named Group</h2>
                         </a>
                         <p class="fs-5 mb-4">Nếu câu regex của bạn có nhiều group, việc nhớ thứ tự của group sẽ rất khó.
                             Để dễ dàng hơn thì regex cho phép bạn đặt tên group. Câu
-                            (?&lt;mygroup&gt;[abc])=\k&lt;mygroup&gt; giống
-                            với câu ([abc])=\1, nhưng bạn có thể gọi group bằng tên của nó.</p>
+                            <mark class="blue">(?&lt;mygroup&gt;[abc])=</mark><mark
+                                class="orange">\k&lt;mygroup&gt;</mark> giống
+                            với câu <mark class="blue">([abc])=\1</mark>, nhưng bạn có thể gọi group bằng tên của nó.
+                        </p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Named Group</a></p><a id="lookaround">
                             <h2 class="fw-bolder mb-4 mt-5">Lookaround</h2>
                         </a>
                         <p class="fs-5 mb-4">Lookaround là một loại group đặc biệt. Nó không trả về kết quả khớp mà dùng
                             để chỉ định một vị trí như là Anchor.</p>
-                        <p class="fs-5 mb-4">q(?=u) sẽ khớp chữ q trong chuỗi question, nhưng không khớp trong chuỗi
-                            Iraq. Đây là lookahead. Chữ u không nằm trong kết quả của regex, nó dùng để chỉ định điều
-                            kiện tìm kiếm. Trong ví dụ này nó sẽ tìm chữ q nào mà có chữ u nằm trước nó.</p>
-                        <p class="fs-5 mb-4">q(?!u) sẽ khớp chữ q trong chuỗi Iraq, nhưng không khớp trong chuỗi
-                            question. Đây là negative lookahead. Ngược lại với lookahead, nó sẽ tìm chữ q mà không có
-                            chữ u nằm trước nó.</p>
-                        <p class="fs-5 mb-4">Để tìm chữ nằm sau, bạn sử dụng lookbehind. Câu (?&lt;=a)b khớp với chữ b
-                            trong chuỗi abc. Câu negative lookbehind (?&lt;!a)b sẽ không khớp được với chuỗi abc.</p>
+                        <p class="fs-5 mb-4"><mark class="gray">q</mark><mark class="blue">(?=</mark><mark
+                                class="gray">u</mark><mark class="blue">)</mark> sẽ khớp chữ <mark class="gray">q</mark>
+                            trong chuỗi <mark class="green">question</mark>,
+                            nhưng sẽ không khớp trong chuỗi
+                            <mark class="green">Iraq</mark>. Đây là lookahead. Chữ <mark class="gray">u</mark> sẽ không
+                            nằm trong kết quả của regex,
+                            nó dùng để chỉ định điều
+                            kiện tìm kiếm. Trong ví dụ này nó sẽ tìm chữ <mark class="green">q</mark> nào mà <b>có</b>
+                            chữ
+                            <mark class="orange">u</mark> nằm trước nó.
+                        </p>
+                        <p class="fs-5 mb-4"><mark class="gray">q</mark><mark class="blue">(?!</mark><mark
+                                class="gray">u</mark><mark class="blue">)</mark> sẽ khớp chữ <mark class="gray">q</mark>
+                            trong chuỗi <mark class="green">Iraq</mark>, nhưng
+                            không khớp trong chuỗi
+                            <mark class="green">question</mark>. Đây là negative lookahead. Ngược lại với lookahead, nó
+                            sẽ tìm chữ <mark class="green">q</mark> mà <b>không có</b>
+                            chữ <mark class="orange">u</mark> nằm trước nó.
+                        </p>
+                        <p class="fs-5 mb-4">Để tìm chữ nằm sau, bạn sử dụng lookbehind. Câu <mark
+                                class="blue">(?&lt;=</mark><mark class="gray">a</mark><mark class="blue">)</mark><mark
+                                class="gray">b</mark> khớp với chữ <mark class="gray">b</mark>
+                            trong chuỗi <mark class="green">abc</mark> vì chữ <mark class="gray">b</mark> có chữ <mark
+                                class="orange">a</mark> nằm trước nó. Câu negative
+                            lookbehind <mark class="blue">(?&lt;!</mark><mark class="gray">a</mark><mark
+                                class="blue">)</mark><mark class="gray">b</mark> sẽ không khớp
+                            được với chuỗi <mark class="green">abc</mark>.</p>
                         <p class="fs-5 mb-4">Bạn có thể chèn cả một câu regex bên trong lookahead. Nhưng một số
                             ứng dụng sẽ giới hạn regex trong lookbehind.</p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Lookaround</a></p>
                         <a id="unicode">
                             <h2 class="fw-bolder mb-4 mt-5">Unicode</h2>
                         </a>
-                        <p class="fs-5 mb-4">\p{L} sẽ khớp một kí tự trong bảng mã Unicode. L có nghĩa là
-                            letter. \P{L}
+                        <p class="fs-5 mb-4"><mark class="blue">\p{L}</mark> sẽ khớp một kí tự trong bảng mã Unicode. L
+                            có nghĩa là
+                            letter. <mark class="blue">\P{L}</mark>
                             sẽ khớp một kí tự không có trong bảng mã Unicode. Bạn có thể xem đầy đủ <a href="#">Bảng mã
                                 Unicode</a>
                             trong hướng dẫn hoàn chỉnh.</p>

@@ -109,6 +109,11 @@ mark.gray {
   color: #eceff4;
 }
 
+mark.orange {
+  background-color: #d08770;
+  color: #eceff4;
+}
+
 .white-link {
   color: var(--bs-body-color) !important;
 }
