@@ -90,7 +90,10 @@
                         <a id="terminology">
                             <h2 class="fw-bolder mb-4 mt-5">Thuật ngữ</h2>
                         </a>
-                        <p class="fs-5 mb-4">***</p>
+                        <p class="fs-5 mb-4">Khớp (Matches): khi một biểu thức regex tìm thấy được kết quả.</p>
+                        <p class="fs-5 mb-4">Escape: regex sử dụng một số kí tự đặc biệt như <mark class="red">+</mark>,
+                            <mark class="red">*</mark>, <mark class="red">\</mark>. Khi bạn muốn sử
+                            dụng những kí tự này như là chữ cứng, bạn phải escape - biến nó thành chữ thường.</p>
                         <a id="literal-character">
                             <h2 class="fw-bolder mb-4 mt-5">Literal Character - Chữ cứng</h2>
                         </a>
@@ -117,13 +120,13 @@
                             <h2 class="fw-bolder mb-4 mt-5">Non-Printable Character - Kí tự không được in</h2>
                         </a>
                         <p class="fs-5 mb-4">Bạn có thể sử dụng chuỗi kí tự đặc biệt để thêm kí tự không in này vào
-                            regex của bạn. Sử dụng <mark class="blue">\t</mark> để khớp một kí tự tab (ASCII 0x09),
-                            <mark class="blue">\r</mark>
-                            cho kí tự carriage return (0x0D), <mark class="blue">\n</mark>
+                            regex của bạn. Sử dụng <mark class="red">\t</mark> để khớp một kí tự tab (ASCII 0x09),
+                            <mark class="red">\r</mark>
+                            cho kí tự carriage return (0x0D), <mark class="red">\n</mark>
                             cho kí tự xuống hàng (line feed, 0x0A). Những kí tự đặc biệt khác như <mark
-                                class="blue">\a</mark>
-                            (bell, 0x07), <mark class="blue">\e</mark> (escape,
-                            0x1B), <mark class="blue">\f</mark> (form feed, 0x0C) và <mark class="blue">\v</mark> (tab
+                                class="red">\a</mark>
+                            (bell, 0x07), <mark class="red">\e</mark> (escape,
+                            0x1B), <mark class="red">\f</mark> (form feed, 0x0C) và <mark class="red">\v</mark> (tab
                             dọc,
                             0x0B). Nhớ rằng Windows sử dụng \r\n để xuống dòng,
                             còn UNIX sử dụng \n.
