@@ -203,13 +203,20 @@
                         <p class="fs-5 mb-4">Sử dụng kí tự đặc biệt Set(?:Value)? để group biểu thức lại mà không tạo ra
                             một group. Việc này thuận tiện khi bạn không cần sử dụng giá trị của group.</p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Grouping và Capturing</a></p>
-                        <a id="group">
+                        <a id="backreference">
                             <h2 class="fw-bolder mb-4 mt-5">Backreference</h2>
                         </a>
                         <p class="fs-5 mb-4">Trong regex, bạn có thể sử dụng \1 để truy vấn giá trị vừa khớp được trong
                             group. ([abc])=\1 sẽ khớp a=a, b=b, và c=c. Nếu câu regex của bạn có nhiều group, số thứ tự
                             truy vấn sẽ đếm từ trái qua phải.</p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Backreference</a></p>
+                        <a id="named-groups">
+                            <h2 class="fw-bolder mb-4 mt-5">Named Group</h2>
+                        </a>
+                        <p class="fs-5 mb-4">Nếu câu regex của bạn có nhiều group, việc nhớ thứ tự của group sẽ rất khó.
+                            Để dễ dàng hơn thì regex cho phép bạn đặt tên group. Câu (?&lt;mygroup&gt;[abc])=\k&lt;mygroup&gt; giống
+                                    với câu ([abc])=\1, nhưng bạn có thể gọi group bằng tên của nó.</p>
+                        <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Named Group</a></p>
                     </section>
                 </article>
             </div>
