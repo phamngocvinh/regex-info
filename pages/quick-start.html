@@ -186,12 +186,19 @@
                         </a>
                         <p class="fs-5 mb-4">Câu lệnh Repetition là dạng câu greedy (Tham lam). Có nghĩa là nó sẽ khớp
                             cho đến khi nào nó không thể khớp được nữa thôi, thay vì trả về kết quả đầu tiên thỏa điều
-                            kiện. Câu regex <.+> sẽ khớp &lt;EM&gt;first&lt;/EM&gt; trong chuỗi This is a &lt;EM>first&lt;/EM&gt; test.</p>
+                            kiện. Câu regex <.+> sẽ khớp &lt;EM&gt;first&lt;/EM&gt; trong chuỗi This is a
+                                &lt;EM>first&lt;/EM&gt; test.</p>
                         <p class="fs-5 mb-4">Đặt dấu hỏi ? phía sau Repetition sẽ làm cho nó lazy (Làm biếng). <.+?> sẽ
                                 chỉ khớp &lt;EM&gt; trong chuỗi trên.</p>
                         <p class="fs-5 mb-4">Một giải pháp tốt hơn là sử dụng không sử dụng Dot. Sử dụng câu regex <[^<>
                                 ]+> để tìm một tag HTML nhanh và tường minh hơn.</p>
                         <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Greedy và Lazy Repetition</a></p>
+                        <a id="group">
+                            <h2 class="fw-bolder mb-4 mt-5">Grouping và Capturing</h2>
+                        </a>
+                        <p class="fs-5 mb-4">Bao quanh biểu thức bằng ngoặc tròn để group nó lại với nhau. Bạn có thể sử
+                            dụng dấu lập lại hay tùy chọn với group. Ví dụ: Set(Value)? khớp Set hoặc SetValue.</p>
+                        <p class="fs-5 mb-4"><a href="#">Tìm hiểu thêm về Grouping và Capturing</a></p>
                     </section>
                 </article>
             </div>
