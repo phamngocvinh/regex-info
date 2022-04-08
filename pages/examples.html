@@ -45,21 +45,9 @@
                             <div class="col-sm-6 full-width">
                                 <ul class="list-unstyled mb-0">
                                     <li><a href="#introduce">Giới thiệu</a></li>
-                                    <li><a href="#terminology">Thuật ngữ</a></li>
-                                    <li><a href="#literal-character">Literal Character</a></li>
-                                    <li><a href="#non-print-character">Non-Printable Character</a></li>
-                                    <li><a href="#character-class">Character Class</a></li>
-                                    <li><a href="#short-character-class">Shorthand Character Class</a></li>
-                                    <li><a href="#using-dot">Using Dot</a></li>
-                                    <li><a href="#anchor">Anchor</a></li>
-                                    <li><a href="#alternation">Alternation</a></li>
-                                    <li><a href="#repetition">Repetition</a></li>
-                                    <li><a href="#greedy">Greedy</a></li>
-                                    <li><a href="#group">Group</a></li>
-                                    <li><a href="#backreference">Backreference</a></li>
-                                    <li><a href="#named-groups">Named-groups</a></li>
-                                    <li><a href="#lookaround">Lookaround</a></li>
-                                    <li><a href="#unicode">Unicode</a></li>
+                                    <li><a href="#trim">Trim String</a></li>
+                                    <li><a href="#email">Email</a></li>
+                                    <li><a href="#date">Date</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -82,77 +70,58 @@
                     </figure>
                     <!-- Post content-->
                     <section class="mb-5">
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="terminology">
-                            <h2 class="fw-bolder mb-4 mt-5">Thuật ngữ</h2>
+                        <p class="fs-5 mb-4">Tại đây sẽ lưu trữ những câu Regex thông dụng mà bạn thường gập.</p>
+                        <a id="trim">
+                            <h2 class="fw-bolder mb-4 mt-5">Trim String</h2>
                         </a>
-                        <p class="fs-5 mb-4">Khớp (Matches): khi một biểu thức regex tìm thấy được kết quả.</p>
-                        <p class="fs-5 mb-4">Escape: regex sử dụng một số kí tự đặc biệt như <mark class="red">+</mark>,
-                            <mark class="red">*</mark>, <mark class="red">\</mark>. Khi bạn muốn sử
-                            dụng những kí tự này như là chữ cứng, bạn phải escape - biến nó thành chữ thường.
+                        <p class="fs-5 mb-4"><mark class="blue">^</mark><mark class="orange">[\s]*</mark><mark
+                                class="green">(</mark><mark class="orange">.*?</mark><mark class="green">)</mark><mark
+                                class="orange">[\s]*</mark><mark class="blue">$</mark></p>
+                        <p class="fs-5 mb-4"><mark class="orange">[\s]*</mark> Khớp 0 hoặc nhiều kí tự khoản trắng
+                            white-space</p>
+                        <p class="fs-5 mb-4"><mark class="orange">.*?</mark> Khớp 0 hoặc nhiều bất kì kí tự nào</p>
+                        <p class="fs-5 mb-4"><mark class="orange">[\s]*</mark> Khớp 0 hoặc nhiều kí tự khoản trắng
+                            white-space</p>
+                        <p class="fs-5 mb-4"><mark class="blue">・・・・・</mark><mark class="green">Lorem ipsum</mark><mark
+                                class="blue">・・・・・</mark></p>
+                        <p class="fs-5 mb-4"><a href="https://regex101.com/r/xIRUoH/1" target="_blank">Test Online</a></p>
+                        <a id="email">
+                            <h2 class="fw-bolder mb-4 mt-5">Email</h2>
+                        </a>
+                        <p class="fs-5 mb-4"><mark class="blue">^</mark><mark class="green">(</mark><mark
+                                class="orange">[a-z0-9_\.-]</mark><mark class="blue">+</mark><mark
+                                class="gray">\@</mark><mark class="orange">[\da-z\.-]</mark><mark
+                                class="blue">+</mark><mark class="gray">\.</mark><mark
+                                class="orange">[a-z\.]{2,6}</mark><mark class="green">)</mark><mark
+                                class="blue">$</mark></p>
+                        <p class="fs-5 mb-4"><mark class="orange">[a-z0-9_\.-]</mark><mark class="blue">+</mark> Khớp
+                            một hoặc nhiều kí tự bao gồm: a-z, 0-9, gạch dưới _ , dấu chấm . và gạch ngang -</p>
+                        <p class="fs-5 mb-4"><mark class="gray">\@</mark> Khớp kí tự @</p>
+                        <p class="fs-5 mb-4"><mark class="orange">[\da-z\.-]</mark><mark class="blue">+</mark> Khớp một
+                            hoặc nhiều kí tự bao gồm: 0-9, a-z, dấu chấm . và gạch ngang -</p>
+                        <p class="fs-5 mb-4"><mark class="gray">\.</mark> Khớp kí tự chấm .</p>
+                        <p class="fs-5 mb-4"><mark class="orange">[a-z\.]{2,6}</mark> Khớp từ 2 đến 6 kí tự bom gồm: a-z
+                            và dấu chấm .</p>
+                        <p class="fs-5 mb-4"><a href="https://regex101.com/r/9uEyK8/1" target="_blank">Test Online</a></p>
+                        <a id="date">
+                            <h2 class="fw-bolder mb-4 mt-5">Date</h2>
+                        </a>
+                        <p class="fs-5 mb-4"><mark class="blue">^</mark><mark class="green">(</mark><mark
+                                class="orange">([1-2][0-9])|(3[0-1])|(0?[1-9])</mark><mark class="green">)</mark><mark
+                                class="gray">\/</mark><mark class="green">(</mark><mark
+                                class="orange">(0?[1-9])|(1[0-2])</mark><mark class="green">)</mark><mark
+                                class="gray">\/</mark><mark class="orange">(\d{4})</mark><mark class="blue">$</p></mark>
+                        <p class="fs-5 mb-4"><mark class="orange">([1-2][0-9])|(3[0-1])|(0?[1-9])</mark><br>・Nếu
+                            hàng chục là 1 hoặc 2 thì chỉ cho điền hàng đơn vị từ 0-9<br>・Nếu hàng chục là 3 thì chỉ cho
+                            điền ngày hàng đơn vị từ 0-1<br>・Nếu ngày chỉ có hàng
+                            đơn vị hoặc nhập số 0 ở hàng chục thì cho nhập từ 1-9
                         </p>
-                        <p class="fs-5 mb-4"><mark class="blue">Màu xanh biển</mark> mô tả biểu thức regex.</p>
-                        <p class="fs-5 mb-4"><mark class="green">Màu xanh lá</mark> mô tả chuỗi chữ.</p>
-                        <p class="fs-5 mb-4"><mark class="gray">Màu xám</mark> mô tả kí tự cứng.</p>
-                        <p class="fs-5 mb-4"><mark class="red">Màu đỏ</mark> mô tả kí tự regex đang được đề cập đến
-                            trong chủ đề.</p>
-                        <p class="fs-5 mb-4"><mark class="orange">Màu cam</mark> dùng để nhấn mạnh ý.</p>
-                        <a id="literal-character">
-                            <h2 class="fw-bolder mb-4 mt-5">Literal Character - Chữ cứng</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="non-print-character">
-                            <h2 class="fw-bolder mb-4 mt-5">Non-Printable Character - Kí tự không được in</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="character-class">
-                            <h2 class="fw-bolder mb-4 mt-5">Character Class - Bộ kí tự</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="short-character-class">
-                            <h2 class="fw-bolder mb-4 mt-5">Shorthand Character Class - Bộ kí tự tiện ích</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="using-dot">
-                            <h2 class="fw-bolder mb-4 mt-5">Using Dot - Sử dụng dấu chấm</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="anchor">
-                            <h2 class="fw-bolder mb-4 mt-5">Anchor</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="alternation">
-                            <h2 class="fw-bolder mb-4 mt-5">Alternation</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="repetition">
-                            <h2 class="fw-bolder mb-4 mt-5">Repetition - Lập lại</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="greedy">
-                            <h2 class="fw-bolder mb-4 mt-5">Greedy và Lazy Repetition</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="group">
-                            <h2 class="fw-bolder mb-4 mt-5">Grouping và Capturing</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="backreference">
-                            <h2 class="fw-bolder mb-4 mt-5">Backreference</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="named-groups">
-                            <h2 class="fw-bolder mb-4 mt-5">Named Group</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="lookaround">
-                            <h2 class="fw-bolder mb-4 mt-5">Lookaround</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
-                        <a id="unicode">
-                            <h2 class="fw-bolder mb-4 mt-5">Unicode</h2>
-                        </a>
-                        <p class="fs-5 mb-4">***</p>
+                        <p class="fs-5 mb-4"><mark class="orange">(0?[1-9])|(1[0-2])</mark><br>・Nếu tháng chỉ có hàng
+                            đơn vị hoặc nhập 0 ở hàng chục thì cho nhập tháng từ 1-9<br>・Nếu tháng hàng chục là 1 thì
+                            chỉ cho nhập tháng ở hàng đơn vị từ 0-2</p>
+                        <p class="fs-5 mb-4"><mark class="orange">(\d{4})</mark><br>・Nhập 4 số cho năm</p>
+                        <p class="fs-5 mb-4">Bạn cũng có thể tham khảo biểu thức trên để viết xử lí cho Time</p>
+                        <p class="fs-5 mb-4"><a href="https://regex101.com/r/zyEcf2/1" target="_blank">Test Online</a></p>
                     </section>
                 </article>
             </div>
