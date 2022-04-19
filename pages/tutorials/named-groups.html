@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Regular Expression Tutorial" />
+    <meta name="author" content="Pham Ngoc Vinh" />
+    <title>Regex 101 - Named Groups</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../../assets/icon.svg" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../../css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">Regex 101</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../quick-start.html">Quick Start</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../tutorial.html">Tutorial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../examples.html">Examples</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page content-->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Side widgets-->
+            <div class="col-lg-3">
+                <!-- Categories widget-->
+                <div class="card mb-4">
+                    <div class="card-header">Contents</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6 full-width">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="../tutorial.html#introduce">Giới thiệu</a></li>
+                                    <li><a href="../tutorial.html#terminology">Thuật ngữ</a></li>
+                                    <li><a href="./special-characters.html">Special Characters</a></li>
+                                    <li><a href="./non-printable-characters.html">Non-Printable Characters</a>
+                                    </li>
+                                    <li><a href="./regex-engine-internals.html">Regex Engine Internals</a>
+                                    </li>
+                                    <li><a href="./character-classes.html">Character Classes</a></li>
+                                    <li><a href="./character-class-subtraction.html">Character Class
+                                            Subtraction</a></li>
+                                    <li><a href="./character-class-intersection.html">Character Class
+                                            Intersection</a></li>
+                                    <li><a href="./shorthand-character-classes.html">Shorthand Character
+                                            Classes</a></li>
+                                    <li><a href="./dot.html">Dot</a></li>
+                                    <li><a href="./anchors.html">Anchors</a></li>
+                                    <li><a href="./word-boundaries.html">Word Boundaries</a></li>
+                                    <li><a href="./alternation.html">Alternation</a></li>
+                                    <li><a href="./optional-items.html">Optional Items</a></li>
+                                    <li><a href="./repetition.html">Repetition</a></li>
+                                    <li><a href="./grouping-capturing.html">Grouping & Capturing</a></li>
+                                    <li><a href="./backreferences.html">Backreferences</a></li>
+                                    <li><a href="./backreferences-part2.html">Backreferences, part 2</a></li>
+                                    <li><a href="./named-groups.html">Named Groups</a></li>
+                                    <li><a href="./relative-backreferences.html">Relative Backreferences</a>
+                                    </li>
+                                    <li><a href="./branch-reset-groups.html">Branch Reset Groups</a></li>
+                                    <li><a href="./free-spacing-comments.html">Free-Spacing & Comments</a>
+                                    </li>
+                                    <li><a href="./unicode.html">Unicode</a></li>
+                                    <li><a href="./mode-modifiers.html">Mode Modifiers</a></li>
+                                    <li><a href="./atomic-grouping.html">Atomic Grouping</a></li>
+                                    <li><a href="./possessive-quantifiers.html">Possessive Quantifiers</a>
+                                    </li>
+                                    <li><a href="./lookahead-lookbehind.html">Lookahead & Lookbehind</a></li>
+                                    <li><a href="./lookaround.html">Lookaround</a></li>
+                                    <li><a href="./keep-text-out-of-the-match.html">Keep Text out of The
+                                            Match</a></li>
+                                    <li><a href="./conditionals.html">Conditionals</a></li>
+                                    <li><a href="./balancing-groups.html">Balancing Groups</a></li>
+                                    <li><a href="./recursion.html">Recursion</a></li>
+                                    <li><a href="./subroutines.html">Subroutines</a></li>
+                                    <li><a href="./infinite-recursion.html">Infinite Recursion</a></li>
+                                    <li><a href="./recursion-quantifiers.html">Recursion & Quantifiers</a>
+                                    </li>
+                                    <li><a href="./recursion-capturing.html">Recursion & Capturing</a></li>
+                                    <li><a href="./recursion-backreferences.html">Recursion &
+                                            Backreferences</a></li>
+                                    <li><a href="./recursion-backtracking.html">Recursion & Backtracking</a>
+                                    </li>
+                                    <li><a href="./posix-bracket-expressions.html">POSIX Bracket
+                                            Expressions</a></li>
+                                    <li><a href="./zero-length-matches.html">Zero-Length Matches</a></li>
+                                    <li><a href="./continuing-matches.html">Continuing Matches</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <!-- Post content-->
+                <article>
+                    <!-- Post header-->
+                    <header class="mb-4">
+                        <!-- Post title-->
+                        <a id="introduce">
+                            <h1 class="fw-bolder mb-1">Named Groups</h1>
+                        </a>
+                    </header>
+                    <!-- Preview image figure-->
+                    <figure class="mb-4"><img class="img-fluid rounded"
+                            src="https://dummyimage.com/900x400/3B4252/eceff4.jpg&text=Named+Groups" alt="..." />
+                    </figure>
+                    <!-- Post content-->
+                    <section class="mb-5">
+                        <h2 class="fw-bolder mb-4 mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+                        <p class="fs-5 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel
+                            vulputate sem, malesuada tempor nulla. Nulla hendrerit sodales pulvinar. Quisque placerat,
+                            neque non aliquam viverra, nulla lectus tristique est, eu lacinia tortor augue porta sapien.
+                            Vivamus gravida rutrum ex at fermentum. Suspendisse sodales sit amet ante a vulputate. Donec
+                            tincidunt dolor ligula, non fermentum justo rhoncus ut. Morbi at lacinia enim. Sed ut massa
+                            leo. Nulla vestibulum finibus nulla quis aliquet. Curabitur ultrices condimentum ex, vel
+                            lobortis libero suscipit non. Nullam sollicitudin efficitur nunc, quis hendrerit tortor
+                            dignissim sed. Nullam lorem nisi, iaculis nec nibh et, mollis eleifend odio. Nullam cursus
+                            diam ut pulvinar fringilla. Curabitur ut viverra felis, vitae tristique augue. </p>
+                        <h2 class="fw-bolder mb-4 mt-5">Duis viverra quam fermentum eleifend luctus</h2>
+                        <p class="fs-5 mb-4">Aliquam non dolor sit amet metus placerat finibus vel ut elit. Etiam at
+                            suscipit augue, nec semper mi. Praesent faucibus erat eget euismod lobortis. In hac
+                            habitasse platea dictumst. Integer gravida ac metus eu commodo. Duis vitae volutpat sapien,
+                            a faucibus nulla. Donec a vehicula tortor. Morbi facilisis non elit bibendum bibendum.
+                            Vivamus luctus tempor neque, eu convallis purus mollis et. Duis rhoncus ligula risus, quis
+                            scelerisque nisl convallis in. Cras vehicula erat nec libero euismod, vitae commodo mauris
+                            vehicula. </p>
+                        <h2 class="fw-bolder mb-4 mt-5">Fusce in est convallis, hendrerit massa eu, laoreet leo</h2>
+                        <p class="fs-5 mb-4">Fusce id neque vitae ligula bibendum laoreet. Aenean quis pretium enim.
+                            Duis eget condimentum lectus. Fusce quis odio id ante aliquam feugiat ac in magna. Nullam
+                            nec placerat nisl, nec interdum neque. Vestibulum accumsan ultrices mauris ac sodales. Sed
+                            imperdiet tellus sed dolor commodo convallis. Duis a arcu pretium, aliquam dolor et,
+                            ultrices nibh. Phasellus dignissim placerat orci. Ut fermentum, leo at ultrices pharetra,
+                            sapien nibh tempus nibh, vitae lacinia erat massa ut nibh. Integer sed faucibus ipsum,
+                            semper pellentesque diam. </p>
+                        <h2 class="fw-bolder mb-4 mt-5">Donec nec magna feugiat, blandit ligula et, aliquet magna</h2>
+                        <p class="fs-5 mb-4">Sed dictum rhoncus ipsum sit amet scelerisque. Ut nec diam eget turpis
+                            dapibus dictum nec at tortor. Nam vitae turpis blandit, venenatis ligula non, volutpat leo.
+                            Duis commodo erat at consequat vulputate. Cras quam leo, pellentesque sit amet bibendum ut,
+                            facilisis in ipsum. Morbi dui elit, faucibus at neque at, dignissim placerat nisl. Mauris
+                            velit tellus, luctus lacinia sagittis a, semper quis libero. Duis maximus felis eu auctor
+                            feugiat. Morbi vitae tristique ex. Morbi eu laoreet eros. Fusce ipsum orci, tincidunt non
+                            lobortis id, lacinia sed lacus. Duis ac elementum justo. Sed fringilla gravida nisl, sed
+                            dapibus odio lobortis vehicula. Quisque ac justo ut elit dignissim feugiat non et sapien. In
+                            cursus tempor placerat. </p>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <footer class="py-3 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Regex 101 by <a href="https://github.com/phamngocvinh"
+                    target="_blank">Pham Ngoc Vinh</a></p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
